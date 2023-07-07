@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link type='text/css' href='../styles.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<script src="bower_components/google-places/google-places.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+<script src="https://kit.fontawesome.com/04b320c669.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<section class="menuMedia" style="animation: myAnim .4s ease 0s 1 normal forwards;" [hidden]="hide">
+  <a><h3 style="text-align: right; margin-right: 30px; margin-top: 60px; "><span style="cursor: pointer;" (click)="esconderMenu()">X</span></h3></a>
+  <ul>
+  <li class="displayFlexCol" style="justify-content: center;">
+   <a href=""> <h1>Menu</h1></a>
+   <a [routerLink]="['/aboutUs']"> <h1>  Acerca de Nosotros</h1></a>
+     <a [routerLink]="['/ubicacion']">   <h1> Contacto</h1></a>
+ </li>
+</ul>
+</section>
+
+
+
+<header class="header textoPrincipal displayFlexRow" [hidden]="hide">
+
+  <a href=""> <img class="imgPimenton" src="../assets/pimentone.png"></a>
+  
+  <ul  class="menu displayFlexRow">
+    <button class="iconMenu" style="background:none; border: none;" type="button" (click)="mostrarMenu()"><i  class="iconMenu fa fa-bars" style="margin: auto;"></i></button>
+  <li class="divMenu">
+
+     <a href="">Menu |</a>
+     <a [routerLink]="['/aboutUs']"> Acerca de Nosotros |</a>
+      <a [routerLink]="['/ubicacion']">  Contacto</a>
+  </li>
+</ul>
+</header>  
+  <div class="divHero textoSecundario" style="position: relative;"[hidden]="ver||are">
+         
+            <h1 class="resi textoPrincipal" style="position: absolute; top:35%; left: 60%;"> Coma rico sin salir de Resi</h1>
+          <span class="tel textoPrincipal" style="position: absolute; top:50%; left: 60%;">123123312</span>
+
+   
+      </div>
+
+  <div class="divOpContainer displayFlexRow"> 
+    <a>  <button class="boton1 btn" (click)="cargarDataArepas()">
+    <i class="fa-solid fa-stroopwafel"></i>
+    <span style="display: block;">VENEZOLANO</span>
+    </button></a>
+   
+
+    <a>  <button class="boton1 btn" (click)="cargarDataDes()" >
+      <i class="fa-thin fas fa-bread-slice"></i>
+      <span style="display: block;">DESAYUNOS</span>
+    </button></a>
+    <button class="boton3 btn">
+     <i class="fa fas fa-hamburger" aria-hidden="true"></i>
+      <span style="display: block;">ALMUERZOS</span>
+    </button>
+  </div>
+ <div class="divContainer_Venezolano displayFlexRow" *ngIf="are"  >
+      <app-tarjetaAlmuerzo  data-aos="fade-up"   [are]=i *ngFor="let i of arepa" ></app-tarjetaAlmuerzo>
+    </div>
+    <!-- <img class="pimenton" src="../assets/Final1.png" style="width: 40px; position: relative; margin: auto; display: block;"> -->
+  <div class="divContainer_Venezolano displayFlexRow" *ngIf="ver">
+    <app-tarjeta-desayunos  data-aos="fade-up"  [des]=e *ngFor="let e of desayuno"></app-tarjeta-desayunos>
+      
+    </div>
+    <!-- <img class="pimenton" src="../assets/Final1.png" style="width: 40px; position: relative; margin: auto; display: block;"> -->
+     <!-- <h4 class="textoH4">Contactanos!!</h4> -->
+    
+     <section class="contacto displayFlexRow" style="margin-top: 10vh;background-color: rgba(224, 167, 167, 0.663);">
+      <div class="contactoWs ">
+       <img class="imgWs" src="../assets/whats.png">
+       <h2 style="text-align: center;">35518257</h2>  
+     </div>
+     <div class="ubicacion">
+  
+        
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.3856253616495!2d-90.41271753620677!3d14.519921250402092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589bb34906dc083%3A0xb408a41c1fb84b01!2sLos%20Pimentones!5e0!3m2!1ses!2sgt!4v1673997637498!5m2!1ses!2sgt" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+     </div>
+      </section>
+  
+  
+  
+      <div class="elfsight-app-3d29c3e2-d6ca-4420-a407-1eda80fcee8f"></div>
+      <footer style="text-align: center;">Derechos Reservados - Los Pimentones</footer>
+
+</html>

@@ -1,0 +1,32 @@
+<section class="menuMedia" style="animation: myAnim .4s ease 0s 1 normal forwards;display:{{hide}}">
+    <a><h3 style="text-align: right; margin-right: 30px; margin-top: 60px; "><span style="cursor: pointer;" (click)="esconderMenu()">X</span></h3></a>
+    <ul>
+    <li class="displayFlexCol" style="justify-content: center;">
+     <a href=""> <h1>Menu</h1></a>
+     <a [routerLink]="['/aboutUs']"> <h1>  Acerca de Nosotros</h1></a>
+     <a [routerLink]="['/ubicacion']"> <h1> Contacto</h1></a>
+   </li>
+  </ul>
+  </section>
+  
+  
+  
+  <header class="header textoPrincipal displayFlexRow">
+  
+    <a href=""> <img class="imgPimenton" src="../assets/pimentone.png"></a>
+    
+    <ul  class="menu displayFlexRow">
+      <button class="iconMenu" style="background:none; border: none;" type="button" (click)="mostrarMenu()"><i  class="iconMenu fa fa-bars" style="margin: auto;"></i></button>
+    <li class="divMenu">
+  
+       <a href="">Menu |</a>
+       <a [routerLink]="['/aboutUs']"> Acerca de Nosotros |</a>
+       <a [routerLink]="['/ubicacion']">  Contacto</a>
+    </li>
+  </ul>
+  </header>  
+
+  <section class="aboutUsSec displayFlexRow">
+    <div class="divFotoAboutUs " style="margin: auto;"></div>
+    <div class="divTextAbout"  style="margin: auto;"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit est harum libero asperiores obcaecati cum illum fugit quaerat? Qui, natus? Necessitatibus voluptates sequi unde incidunt commodi impedit voluptatem vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit suscipit iusto, obcaecati eum recusandae asperiores corrupti sapiente earum excepturi debitis dolor omnis exercitationem illo odit fugiat quis placeat quas explicabo.</p></div>
+  </section>

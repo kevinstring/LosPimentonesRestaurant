@@ -1,0 +1,259 @@
+@import '~normalize.css';
+body{
+    font-family: 'Quicksand', sans-serif;
+   
+}
+
+/* Class Secundarios */
+.textoPrincipal{
+    color: rgb(255, 255, 255);
+    letter-spacing: .1em;
+
+}
+h2{
+    position: relative; text-align: center; font-size: larger;
+    color: rgb(201, 32, 32);
+}
+
+
+.textoSecundario{
+    color: rgb(0, 0, 0);
+
+}
+
+.textoH4{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 4em;
+    margin-top: 18px;
+    text-align: center;
+}
+.displayFlexRow{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.displayFlexCol{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.precioEstilo{
+    position: absolute; top:85%; 
+}
+/* Class principales */
+.imgPimenton{
+    max-width: 150px;
+   
+}
+
+.header{
+    width: 100%;
+    position: sticky;
+    justify-content:space-between;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(278deg, rgb(255, 0, 0));
+    z-index: 9;
+}
+.menuMedia{
+    background-color: rgba(245, 71, 71, 0.83);
+    position: absolute;
+    height: 95vh;
+    width: 100%;
+    z-index: 99;
+
+    
+ }
+.menu{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 15px;
+    color: black;
+}
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
+
+.divHero{
+
+    background-image: url("../src/assets/img1Hero.jpg");
+    background-size: cover;
+    height: 50vh;
+    max-width: 99vw;
+ 
+    position: relative;
+}
+
+
+.numerows{
+    width: 100%;
+    height: 80px;
+}
+
+.btn{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    border-style: hidden;
+    background-color: rgb(243, 226, 226);
+    
+}
+
+.btn:hover{
+    background-color: rgba(252, 0, 0, 0.498);
+}
+
+.divOpContainer{
+    padding: 10px;
+    gap: 50px;
+}
+.since{
+    position: absolute; 
+    display: block;
+    margin-left: 90vw;
+    margin-top:-38px;
+}
+
+
+
+h3{
+    text-align: center;
+}
+
+.contacto{
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.imgWs{
+    width: 200px;
+    border-radius: 10px;
+}
+iframe{
+    width: 300px;
+    height: 200px;
+}
+
+.tarjetaVenezolano{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-items: center;
+    height: 400px;
+    width: 300px;
+    background-color:  rgba(172, 117, 117, 0.451);
+    transition: .5s ease;
+
+}
+
+.tarjetaVenezolano:hover{
+    transform: scale(105%);
+}
+
+
+.iconMenu{
+    display: none;
+}
+.imgTarjeta{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+a{
+    font-style: none;
+    text-decoration: none;
+    font-size:large ;
+    color: black;
+}
+
+
+
+
+
+/* ABOUT US */
+
+.aboutUsSec{
+    margin: 10px;
+    background-color:  rgb(243, 226, 226);
+    padding: 30px;
+    height: auto;
+
+}
+.divFotoAboutUs{
+    background-color: white;
+    background-image: url("../src/assets/pim.jpg");
+    width:50%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+    filter: brightness(110%);
+    
+}
+
+.divTextAbout{
+    text-align: center;
+    max-width: auto;
+    border-radius: 20px;
+    background-color: white;
+    padding: 30px;
+
+}
+
+.infoenvios{
+    width: 300px;
+    margin: auto;
+}
+@keyframes infoEn {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@media (max-width:600px){
+    .divMenu{display:none }
+    .iconMenu{display: block; margin-right: 20px;}
+    .menuMedia{   transition: 5s;}
+    .btn{width: 125px; height: 110px;}
+    .divFotoAboutUs{height: 30vh; width: 400px; background-size: cover;}
+    .resi{display: none;}
+    .tel{display: none;}
+}

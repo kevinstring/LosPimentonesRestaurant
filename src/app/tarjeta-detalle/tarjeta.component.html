@@ -1,0 +1,46 @@
+<section class="menuMedia" style="animation: myAnim .4s ease 0s 1 normal forwards;" [hidden]="hide">
+       <a><h3 style="text-align: right; margin-right: 30px; margin-top: 60px; "><span style="cursor: pointer;" (click)="esconderMenu()">X</span></h3></a>
+       <ul>
+       <li class="displayFlexCol" style="justify-content: center;">
+        <a href=""> <h1>Menu</h1></a>
+        <a [routerLink]="['/aboutUs']"> <h1>  Acerca de Nosotros</h1></a>
+          <a [routerLink]="['/ubicacion']">   <h1> Contacto</h1></a>
+      </li>
+     </ul>
+     </section>
+     
+     
+     
+     <header class="header textoPrincipal displayFlexRow" [hidden]="hide">
+     
+       <a href=""> <img class="imgPimenton" src="../assets/pimentone.png"></a>
+       
+       <ul  class="menu displayFlexRow">
+         <button class="iconMenu" style="background:none; border: none;" type="button" (click)="mostrarMenu()"><i  class="iconMenu fa fa-bars" style="margin: auto;"></i></button>
+       <li class="divMenu">
+     
+          <a href="">Menu |</a>
+          <a [routerLink]="['/aboutUs']"> Acerca de Nosotros |</a>
+           <a [routerLink]="['/ubicacion']">  Contacto</a>
+       </li>
+     </ul>
+     </header> 
+    
+<div class="divContainer_Venezolano displayFlexRow aboutUsSec" style="justify-items:center; margin: auto; width: auto;">
+   
+ <div class="displayFlexCol" style="justify-content:center">
+
+       <img class="imgTarjeta" src="{{pedido.imagen}}">
+       <h2 class="textoSecundario" style="text-align: center;">{{pedido.nombre}}</h2>
+       <p class="textoSecundario">{{pedido.descripcion}}</p>
+       <h4 class="textoSecundario">Precio: Q{{pedido.precio}}</h4>
+ </div>
+     
+</div>
+<section class="infoenvios" ><h1 style="text-align:center; color: Red; animation: infoEn 0.2s linear 0s 1 normal none;
+       ">¡Atencion!</h1>
+       <p style="text-align:center; animation: infoEn 0.3s linear 0s 1 normal none;
+">Los pedidos desde whatsapp solamente son aptos para vecinos de RESIDENCIALES SAN JOSE PINULA</p></section>
+<div class="contactoWs displayFlexRow">
+       <a aria-label="Chat on WhatsApp" href='https://wa.me/35518257?text=Me gustaria pedir {{pedido.nombre}}'> <img alt="Chat on WhatsApp" src="/assets/WhatsAppButtonGreenLarge.png" style="width: 300px;"> </a>
+     </div>

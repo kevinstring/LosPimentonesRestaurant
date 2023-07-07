@@ -1,0 +1,12 @@
+
+<div class="tarjetaVenezolano displayFlexCol tarjetas"  >
+<a class="a" [routerLink]="['/tarjeta',des.id,des.clasi]" > 
+        <img class="imgTarjeta" src="{{des.imagen}}">
+        <h2>{{des.nombre}}</h2>
+        <p class="textoSecundario"style="position: relative; text-align: center;" >{{des.descripcion}}</p>
+        <h4 class="precioEstilo"><span style="color:rgb(201, 32, 32);">Precio:</span> {{des.precio |quetzal}}</h4>
+
+      </a>
+     
+
+    </div>
